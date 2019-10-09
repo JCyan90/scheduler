@@ -2,7 +2,9 @@
 This is a single-page app built on React.js that allows users to book, edit or cancel interviews for each day of the week (Monday to Friday).
 
 ## Final product 
-
+!["Regular appointments"](https://github.com/JCyan90/scheduler/blob/master/docs/appointments.png?raw=true)
+!["Create/Edit form"](https://github.com/JCyan90/scheduler/blob/master/docs/create_edit_form.png?raw=true)
+!["Delete confirmation"](https://github.com/JCyan90/scheduler/blob/master/docs/delete_confirmation.png?raw=true)
 
 ## Getting started
 1. Fork this repository, then clone your fork of this repository.
