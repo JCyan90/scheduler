@@ -12,9 +12,8 @@ export default function reducer(state, action) {
       return { ...state, days: action.days, appointments: action.appointments, interviewers: action.interviewers }
     }
     case SET_INTERVIEW: {
-      // Update the number of spots remaining
+      // Update the number of spots remaining for a specific day when booking/canceling
       const dayData = state.days.filter(d => d.name === state.day)
-
       const spotsCount = (day) => {
         let result = 0;
         day.appointments.forEach(appointment => {
@@ -22,7 +21,7 @@ export default function reducer(state, action) {
         })
         return result;
       }
-
+      
       const updatedDay = { ...dayData[0], spots: spotsCount(dayData[0])};
       const dayId = state.days.indexOf(dayData[0]);
       const days = [...state.days.slice(0, dayId),  updatedDay, ...state.days.slice( dayId + 1, state.days.length)];

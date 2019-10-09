@@ -2,6 +2,7 @@ import { useEffect, useReducer } from "react";
 import axios from "axios";
 import reducer, { SET_DAY, SET_APPLICATION_DATA, SET_INTERVIEW } from "../reducers/application";
 
+// Data and state management
 export default function useApplicationData(initial) {
   
   const [state, dispatch] = useReducer(reducer, {
