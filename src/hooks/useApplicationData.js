@@ -12,8 +12,10 @@ export default function useApplicationData(initial) {
     interviewers: {}
   });
   
+  // Switch to a new day
   const setDay = day => dispatch({ type: SET_DAY, day});
 
+  // Add the new interview in the appointments state and make the PUT request
   const bookInterview = (id, interview) => {
     const appointment = {
       ...state.appointments[id],
@@ -31,6 +33,7 @@ export default function useApplicationData(initial) {
       .then(() => dispatch({ type: SET_INTERVIEW, appointments }));
   };
 
+  // Remove the interview from the appointments state and make a DELETE request
   const cancelInterview = (id) => {
     const appointment = {
       ...state.appointments[id],
@@ -47,6 +50,7 @@ export default function useApplicationData(initial) {
       .then(() => dispatch({ type: SET_INTERVIEW, appointments }));
   };
 
+  // Take all the data from the database to set up the initial state
   useEffect(() => {
     const promiseDays = axios.get("/api/days");
     const promiseAppointments = axios.get("/api/appointments");

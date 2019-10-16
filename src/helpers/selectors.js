@@ -1,3 +1,4 @@
+// Use the state to return the appointments for a specific day
 function getAppointmentsForDay(state, day) {
   const result = [];
   const dayData = state.days.filter(d => d.name === day)
@@ -10,6 +11,7 @@ function getAppointmentsForDay(state, day) {
   return result;
 };
 
+// Return the interviewers of a specific day
 function getInterviewersForDay(state, day) {
   const result = [];
   const dayData = state.days.filter(d => d.name === day)
@@ -22,6 +24,7 @@ function getInterviewersForDay(state, day) {
   return result;
 };
 
+// Add the info of the interviewer for an existing interview
 function getInterview(state, interview) {
   if (interview) {
     const interviewer = state.interviewers[interview.interviewer];
