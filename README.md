@@ -15,7 +15,7 @@ Confirmation message before deleting an interview
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
 3. Run the Webpack Development Server using the `npm start` command.
-4. Go to <http://localhost:8080/> in your browser.
+4. Go to <http://localhost:8000/> in your browser.
 5. (Optional): Run the Jest Test Framework using `npm test`.
 6. (Optional): Run the Storybook Visual Testbed using `npm run storybook`.
 
